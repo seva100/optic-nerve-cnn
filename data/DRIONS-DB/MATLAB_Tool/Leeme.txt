@@ -1,0 +1,7 @@
+
+ABOUT ShowDRIONS_DB.m
+=====================
+
+This is a MATLAB program to show the 110 eye fundus images and optic
+nerve contours (expert 1 and expert2) wich contains DRIONS_DB. Each 
+image is displayed one after another by pressing any key.

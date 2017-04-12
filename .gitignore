@@ -1,0 +1,10 @@
+side solutions/*.zip
+articles/*
+reports/pdf_reports/*
+reports/.ipynb_checkpoints/
+reports/DRIU_difference
+scripts/*.pyc
+scripts/.ipynb_checkpoints/
+grant proposals/*
+.idea/
+.idea/*

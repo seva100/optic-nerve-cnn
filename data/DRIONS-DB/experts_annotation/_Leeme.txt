@@ -1,0 +1,14 @@
+
+ABOUT THE OPTIC NERVE CONTOUR TRACED BY THE EXPERTS
+===================================================
+
+For each image, two experts traced the optic nerve contour. Each contour 
+is based in a sequence of 36 points and is stored in a file:
+ 
+ anotExpert1_XXX.txt for the expert_1
+
+ anotExpert2_XXX.txt for the expert_2
+
+where 'XXX' is the image number. Each file contains 36 rows and 2 columns, 
+therefore each row stores the X and Y coordinates of each point belonging
+to a contour.   

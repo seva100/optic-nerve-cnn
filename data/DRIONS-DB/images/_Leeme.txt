@@ -1,0 +1,8 @@
+
+ABOUT THE IMAGES DATA BASE
+==========================
+ 
+The 110 images were acquired with a colour analogical fundus camera, approximately
+centred on the ONH and they were stored in slide format. In order to have the images 
+in digital format, they were digitised using a HP-PhotoSmart-S20 high-resolution 
+scanner, RGB format, resolution 600x400 and 8 bits/pixel.
