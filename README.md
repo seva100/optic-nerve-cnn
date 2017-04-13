@@ -6,4 +6,4 @@ This repository contains code in support of the paper: ["Optic Disc and Cup Segm
 
 Built with Python 2.7 and Keras.
 
-See *scripts* folder for clarification of usage. Data should be recreated with *scripts/Organize datasets.ipynb* notebook.
+See *scripts* folder for notebooks for training with clarification of usage. HDF5 datasets should be recreated with *scripts/Organize datasets.ipynb* notebook.
