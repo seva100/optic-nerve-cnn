@@ -16,4 +16,4 @@ Click the following links to watch content of notebooks in a handy way:
 * [U-Net, OD cup on RIM-ONE v3, cropped by OD (fold 0).ipynb (**nbviewer**)](http://nbviewer.jupyter.org/github/seva100/optic-nerve-cnn/blob/master/scripts/U-Net%2C%20OD%20cup%20on%20RIM-ONE%20v3%2C%20cropped%20by%20OD%20%28fold%200%29.ipynb)
 * [U-Net, OD cup on DRISHTI-GS, cropped by OD (fold 0).ipynb (**nbviewer**)](http://nbviewer.jupyter.org/github/seva100/optic-nerve-cnn/blob/master/scripts/U-Net%2C%20OD%20cup%20on%20DRISHTI-GS%2C%20cropped%20by%20OD%20%28fold%200%29.ipynb)
 
-The software is distributed under MIT License, which requires that copyright notice and this permission notice shall be included in all copies or substantial portions of this software. Commercial use, distribution, modification and private use are fully allowed.
+The software is distributed under [MIT License](LICENSE), which requires that copyright notice and [this permission notice](LICENSE) shall be included in all copies or substantial portions of this software. Commercial use, distribution, modification and private use are fully allowed.
