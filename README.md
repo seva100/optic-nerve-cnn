@@ -1,14 +1,17 @@
 ## Optic Disc and Cup Segmentation Methods with U-Net
 
-This repository contains code in support of the paper: ["Optic Disc and Cup Segmentation Methods for Glaucoma Detection with Modification of U-Net Convolutional Neural Network"](https://arxiv.org/abs/1704.00979):
-
-*Sevastopolsky, Artem. "Optic Disc and Cup Segmentation Methods for Glaucoma Detection with Modification of U-Net Convolutional Neural Network." arXiv preprint arXiv:1704.00979 (2017).*
-
-*(accepted for publication in "Pattern Recognition and Image Analysis: Advances in Mathematical Theory and Applications" journal, ISSN 1054-6618)*
+This repository contains code in support of the paper: ["Optic Disc and Cup Segmentation Methods for Glaucoma Detection with Modification of U-Net Convolutional Neural Network"](https://arxiv.org/abs/1704.00979), available in several versions:
+1. Sevastopolsky A., *Optic disc and cup segmentation methods for glaucoma detection with modification
+of U-Net convolutional neural network*, Pattern Recognition and Image Analysis 27 (2017), no. 3, 618–624.
+2. Sevastopolsky, Artem. *Optic Disc and Cup Segmentation Methods for Glaucoma Detection with Modification of U-Net Convolutional Neural Network.* arXiv preprint arXiv:1704.00979 (2017).
 
 Built with Python 2.7 and Keras.
 
-See *scripts* folder for notebooks for training with clarification of usage. HDF5 datasets should be recreated with *scripts/Organize datasets.ipynb* notebook. *models_weights* folder contains pre-trained models.
+See *scripts* folder for notebooks for training with clarification of usage. 
+
+HDF5 datasets can be recreated with *scripts/Organize datasets.ipynb* notebook or downloaded from [this url](https://drive.google.com/drive/folders/13g62bhqN1JHJ2fky2Xy5avLbZ2YLMdwB?usp=sharing).
+
+*models_weights* folder contains pre-trained models.
 
 Click the following links to watch content of notebooks in a handy way:
 * [U-Net, OD on RIM-ONE v3 (fold 0).ipynb (**nbviewer**)](http://nbviewer.jupyter.org/github/seva100/optic-nerve-cnn/blob/master/scripts/U-Net%2C%20OD%20on%20RIM-ONE%20v3%20%28fold%200%29.ipynb)
