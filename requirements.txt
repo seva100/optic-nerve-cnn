@@ -1,0 +1,11 @@
+numpy
+scipy
+scikit-image
+pandas
+Pillow
+matplotlib
+h5py==2.8.0rc1
+tqdm
+mahotas
+keras
+unittest2
