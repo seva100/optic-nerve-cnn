@@ -1,4 +1,9 @@
 import os
+from platform import python_version_tuple
+
+if python_version_tuple()[0] == 3:
+    xrange = range
+
 import numpy as np
 import pandas as pd
 import cv2

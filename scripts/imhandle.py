@@ -117,11 +117,8 @@ def load_set(folder, shuffle=False):
 
 
 def image_names_in_folder(folder):
-    fn = []
-    for ending in ('*.jpg', '*.jpeg', '*.JPG', '*.JPEG', '*.png', '*.bmp', '*.ppm'):
-        fn.extend(glob.glob(os.path.join(folder, ending)))
-    fn.sort()
-    return fn
+    return sorted(glob.glob(os.path.join(folder, extension))
+                  for extension in ('*.jpg', '*.jpeg', '*.JPG', '*.JPEG', '*.png', '*.bmp', '*.ppm'))
 
 
 def rgb_to_grayscale(rgb_img):
