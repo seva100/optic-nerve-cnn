@@ -83,7 +83,7 @@ def array_to_img(x, dim_ordering='default', scale=True):
 
 def img_to_array(img, dim_ordering='default'):
     if dim_ordering == 'default':
-        dim_ordering = K.image_dim_ordering()
+        dim_ordering = 'channels_first' if K.image_data_format() == 'th' else 'channels_last'
     if dim_ordering not in ['th', 'tf']:
         raise Exception('Unknown dim_ordering: ', dim_ordering)
     # image has dim_ordering (height, width, channel)
@@ -154,18 +154,17 @@ class DualImageDataGenerator(object):
                  rescale=None,
                  dim_ordering='default'):
         if dim_ordering == 'default':
-            dim_ordering = K.image_dim_ordering()
+            dim_ordering = K.image_data_format()
         self.__dict__.update(locals())
         self.mean = None
         self.std = None
         self.principal_components = None
         self.rescale = rescale
 
-        if dim_ordering not in {'tf', 'th'}:
-            raise Exception('dim_ordering should be "tf" (channel after row and '
-                            'column) or "th" (channel before row and column). '
-                            'Received arg: ', dim_ordering)
-        self.dim_ordering = dim_ordering
+        if dim_ordering == 'channels_first':
+            self.dim_ordering = dim_ordering = 'th'
+        else:
+            self.dim_ordering = dim_ordering = 'tf'
         if dim_ordering == 'th':
             self.channel_index = 1
             self.row_index = 2
