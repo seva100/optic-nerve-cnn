@@ -1,5 +1,7 @@
 ## Optic Disc and Cup Segmentation Methods with U-Net
 
+*Note: the codebase is deprecated. It would require significant refactoring for newly released keras and tensorflow versions, however, due to the lack of time I am unable to do that continuously. Feel free to fork the repository to make any changes.*
+
 This repository contains code in support of the paper: ["Optic Disc and Cup Segmentation Methods for Glaucoma Detection with Modification of U-Net Convolutional Neural Network"](https://arxiv.org/abs/1704.00979), available in several versions:
 1. Sevastopolsky A., *Optic disc and cup segmentation methods for glaucoma detection with modification
 of U-Net convolutional neural network*, Pattern Recognition and Image Analysis 27 (2017), no. 3, 618–624.
