@@ -7,7 +7,7 @@ This repository contains code in support of the paper: ["Optic Disc and Cup Segm
 of U-Net convolutional neural network*, Pattern Recognition and Image Analysis 27 (2017), no. 3, 618–624.
 2. Sevastopolsky, Artem. *Optic Disc and Cup Segmentation Methods for Glaucoma Detection with Modification of U-Net Convolutional Neural Network.* arXiv preprint arXiv:1704.00979 (2017).
 
-Built with Python 3.7, Keras 2.3.1 with TensorFlow backend 2.0.0.
+Highest versions tested on: Python 3.9.10; TensorFlow 2.8.0; numpy 1.22.2.
 
 See *scripts* folder for notebooks for training with clarification of usage.   
 HDF5 datasets can be recreated with *scripts/Organize datasets.ipynb* notebook or downloaded from [this url](https://drive.google.com/drive/folders/13g62bhqN1JHJ2fky2Xy5avLbZ2YLMdwB?usp=sharing).

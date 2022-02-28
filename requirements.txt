@@ -1,11 +1,13 @@
-numpy
-scipy
-scikit-image
-pandas
 Pillow
-matplotlib
-h5py==2.8.0rc1
-tqdm
+h5py==3.6.0
 mahotas
-keras
+matplotlib
+numpy
+# opencv-python
+pandas
+scikit-image
+scikit-learn
+scipy
+tensorflow
+tqdm
 unittest2
