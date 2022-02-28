@@ -4,8 +4,8 @@ scikit-image
 pandas
 Pillow
 matplotlib
-h5py==2.8.0rc1
+h5py==3.6.0
 tqdm
 mahotas
-keras
+tensorflow
 unittest2

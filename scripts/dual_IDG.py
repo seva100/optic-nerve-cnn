@@ -14,14 +14,13 @@ from __future__ import absolute_import
 from __future__ import print_function
 
 import numpy as np
-import re
 from scipy import linalg
 import scipy.ndimage as ndi
 # from six.moves import range
 import os
 import threading
 
-from keras import backend as K
+import tensorflow.python.keras.backend as K
 
 
 def random_channel_shift(x, intensity, channel_index=0):
@@ -102,7 +101,7 @@ def img_to_array(img, dim_ordering='default'):
 
 
 class DualImageDataGenerator(object):
-    '''Generate minibatches with
+    """Generate minibatches with
     real-time data augmentation.
     Assume X is train img, Y is train label (same size as X with only 0 and 255 for values)
     # Arguments
@@ -134,7 +133,7 @@ class DualImageDataGenerator(object):
             It defaults to the `image_dim_ordering` value found in your
             Keras config file at `~/.keras/keras.json`.
             If you never set it, then it will be "th".
-    '''
+    """
     def __init__(self,
                  featurewise_center=False,
                  samplewise_center=False,
@@ -208,7 +207,7 @@ class DualImageDataGenerator(object):
             x /= (self.std + 1e-7)
 
         if self.zca_whitening:
-            flatx = np.reshape(x, (x.size))
+            flatx = np.reshape(x, x.size)
             whitex = np.dot(flatx, self.principal_components)
             x = np.reshape(whitex, (x.shape[0], x.shape[1], x.shape[2]))
 
@@ -290,7 +289,7 @@ class DualImageDataGenerator(object):
             augment=False,
             rounds=1,
             seed=None):
-        '''Required for featurewise_center, featurewise_std_normalization
+        """Required for featurewise_center, featurewise_std_normalization
         and zca_whitening.
         # Arguments
             X: Numpy array, the data to fit on.
@@ -299,7 +298,7 @@ class DualImageDataGenerator(object):
                 how many augmentation passes to do over the data
             seed: random seed.
         # Only applied to X
-        '''
+        """
         X = np.copy(X)
         if augment:
             aX = np.zeros(tuple([rounds * X.shape[0]] + list(X.shape)[1:]))
@@ -414,13 +413,13 @@ class NumpyArrayIterator(Iterator):
                                                                   index=current_index + i,
                                                                   hash=np.random.randint(1e4),
                                                                   format=self.save_format)
-                img.save(os.path.join(self.save_to_dir, fname))
+                img.save(os.path.join(self.save_to_dir, fname), save_format='h5')
                 mask = array_to_img(batch_y[i], self.dim_ordering, scale=True)
                 fname = '{prefix}_{index}_{hash}_mask.{format}'.format(prefix=self.save_prefix,
                                                                   index=current_index + i,
                                                                   hash=np.random.randint(1e4),
                                                                   format=self.save_format)
-                mask.save(os.path.join(self.save_to_dir, fname))
+                mask.save(os.path.join(self.save_to_dir, fname), save_format='h5')
         return batch_x, batch_y
 
 

@@ -14,6 +14,10 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 
+from sys import version_info
+if version_info[0] == '2':
+    range = xrange
+
 
 class ImLibException(Exception):
     pass
@@ -69,7 +73,7 @@ def save_image(path, img):
         tmp = np.asarray(img * 255.0, dtype=np.uint8)
     else:
         tmp = np.asarray(img, dtype=np.uint8)
-    Image.fromarray(tmp).save(path)
+    Image.fromarray(tmp).save(path, save_format='h5')
 
 
 def show_image(img, fig_size=(10, 10)):
@@ -152,7 +156,7 @@ def plot_subfigures(imgs, title=None, fig_size=None, contrast_normalize=False):
         plt.gray()
         if title is not None:
             fig.suptitle(title, fontsize=12)
-        for i in xrange(imgs.shape[0]):
+        for i in range(imgs.shape[0]):
             axes[i].axis('off')
             axes[i].set_xticks([])
             axes[i].set_yticks([])
@@ -174,8 +178,8 @@ def plot_subfigures(imgs, title=None, fig_size=None, contrast_normalize=False):
         plt.gray()
         if title is not None:
             fig.suptitle(title, fontsize=12)
-        for i in xrange(imgs.shape[0]):
-            for j in xrange(imgs.shape[1]):
+        for i in range(imgs.shape[0]):
+            for j in range(imgs.shape[1]):
                 axes[i][j].axis('off') 
                 axes[i][j].set_xticks([])
                 axes[i][j].set_yticks([])

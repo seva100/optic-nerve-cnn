@@ -1,7 +1,7 @@
 import os
-from platform import python_version_tuple
+from sys import version_info
 
-if python_version_tuple()[0] == 3:
+if version_info[0] == 3:
     xrange = range
 
 import numpy as np
@@ -59,7 +59,7 @@ def extract_DRIONS_DB(db_folder, expert=1):
 
 def get_resolution_DRIONS_DB():
     """Returns DRIONS_DB resolution after post-processing."""
-    return (560, 560)
+    return 560, 560
 
 
 def extract_RIM_ONE_v2(db_folder):
@@ -131,7 +131,7 @@ def extract_RIM_ONE_v2(db_folder):
 
 def get_resolution_RIM_ONE_v2():
     """Returns RIM_ONE_v2 resolution after post-processing."""
-    return (394, 394)
+    return 394, 394
 
 
 def extract_RIM_ONE_v3(db_folder, expert='avg', return_disc=True, return_cup=True):
@@ -238,7 +238,7 @@ def extract_RIM_ONE_v3(db_folder, expert='avg', return_disc=True, return_cup=Tru
 
 def get_resolution_RIM_ONE_v3():
     """Returns RIM_ONE_v3 resolution after post-processing."""
-    return (1424, 1424)
+    return 1424, 1424
 
 
 def extract_DRISHTI_GS_train(db_folder, return_disc=True, return_cup=True):
@@ -342,7 +342,7 @@ def extract_DRISHTI_GS_test(db_folder):
 def get_resolution_DRISHTI_GS():
     """Returns DRISHTI-GS resolution after post-processing."""
     #return (2040, 1750)
-    return (2040, 2040)
+    return 2040, 2040
 
 
 def extract_HRF(db_folder, expert=1):
@@ -365,6 +365,7 @@ def extract_HRF(db_folder, expert=1):
     orig_resolution = (2336, 3504)
     result_resolution = (3504, 3504)
 
+    expert_letter = None
     if expert == 1:
         expert_letter = 'A'
     elif expert == 2:
@@ -405,5 +406,5 @@ def extract_HRF(db_folder, expert=1):
 
 def get_resolution_HRF():
     """Returns RIM_ONE_v2 resolution after post-processing."""
-    return (3504, 3504)
+    return 3504, 3504
 
