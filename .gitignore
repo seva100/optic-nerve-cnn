@@ -8,3 +8,4 @@ scripts/.ipynb_checkpoints/
 grant proposals/*
 .idea/
 .idea/*
+__pycache__
